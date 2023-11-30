@@ -1,5 +1,6 @@
 import vercelAdapter from '@sveltejs/adapter-vercel';
-import sveltePreprocess from 'svelte-preprocess';
+//import sveltePreprocess from 'svelte-preprocess';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 import { mdsvex } from 'mdsvex';
 
 import mdsvexConfig from './mdsvex.config.js';
@@ -8,7 +9,7 @@ import { codePreview } from './src/lib/plugins/svelte.js';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   extensions: ['.svelte', ...mdsvexConfig.extensions],
-  preprocess: [mdsvex(mdsvexConfig), sveltePreprocess(), codePreview()],
+  preprocess: [mdsvex(mdsvexConfig), vitePreprocess(), codePreview()],
 
   vitePlugin: {
     inspector: {

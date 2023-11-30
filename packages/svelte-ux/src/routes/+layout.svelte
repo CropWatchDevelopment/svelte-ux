@@ -105,7 +105,7 @@
   </main>
 </AppLayout>
 
-<style lang="postcss">
+<!-- <style lang="postcss">
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
@@ -210,4 +210,4 @@
   :global(main) {
     @apply text-neutral-200;
   } */
-</style>
+</style> -->
